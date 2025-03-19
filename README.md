@@ -24,6 +24,15 @@
 📁 DentalAppointmentSystem
 ├── 📁 src
 │   ├── StartPage.java  # 起始頁面
+│   ├── SignUpPage.java  # 註冊頁面
+│   ├── SearchPage.java  # 搜尋頁面
+│   ├── ReviewPage.java  #查詢預約資料
+│   ├── On_sitePage.java  #
+│   ├── On_siteInfoPage.java  #
+│   ├── AppointedPage.java  #
+│   ├── AppointedInfoPage.java  #
+│   ├── BasicInfoPage.java  #
+│   ├── AuthenticationPage.java  #
 │   ├── AppointmentSystem.java  # 掛號管理類別
 │   ├── Dentist.java  # 牙醫抽象類別
 │   ├── AppointedDentist.java  # 指定預約醫生
@@ -31,10 +40,15 @@
 │   ├── Patient.java  # 病患抽象類別
 │   ├── SpecialPatient.java  # 特殊病患（榮民、身障）
 │   ├── NormalPatient.java  # 一般病患
+│   ├── Verification.java # 驗證
 │   ├── Detail.java  # 病歷詳細資訊
+│   ├── Register.txt  # 註冊資料
+│   ├── Patient.txt  # 病人資料
+│   ├── Dentist.txt  # 醫師資料
+
 └── 📁 resources
-    ├── icon.png  # 應用程式圖示
-    └── data.txt  # 儲存病患與醫生資料
+    ├── LOGO.png  # 應用程式圖示
+    └── 資料.xlsx  # 儲存病患與醫生資料
 ```
 
 ## 安裝與使用
