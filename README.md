@@ -33,7 +33,6 @@
 │   ├── AppointedInfoPage.java  # 預約資訊顯示頁面
 │   ├── BasicInfoPage.java  # 病患個人資料頁面
 │   ├── AuthenticationPage.java  # 身份驗證頁面
-│   ├── AppointmentSystem.java  # 掛號管理類別
 │   ├── Dentist.java  # 牙醫抽象類別
 │   ├── AppointedDentist.java  # 指定預約醫生
 │   ├── On_siteDentist.java  # 現場掛號醫生
@@ -150,14 +149,42 @@
 - `TimeList` (TreeMap) - 約診時間
 - `ID` (String) - 醫生編號
 
-### **掛號系統 AppointmentSystem (控制類別)**
+### **掛號系統 BasicInfoPage (控制類別)**
+`BasicInfoPage` 類別負責顯示病患的基本資料並提供各項操作，如預約掛號、現場掛號、查詢掛號及返回首頁等。此類別主要控制病患資料頁面的顯示及各功能頁面的跳轉。
 
-`AppointmentSystem` 類別負責管理病患的掛號與約診時間，提供新增、修改與刪除掛號的功能。
+#### 屬性:
+- `IDLabel`：顯示病患身分證的標籤。
+- `nameLabel`：顯示病患姓名的標籤。
+- `birthLabel`：顯示病患生日的標籤。
+- `IDOutput`：顯示病患身分證的文字欄位（只讀）。
+- `nameOutput`：顯示病患姓名的文字欄位（只讀）。
+- `birthOutput`：顯示病患生日的文字欄位（只讀）。
+- `appointedButton`：按鈕，點擊後可進入預約掛號頁面。
+- `On_siteButton`：按鈕，點擊後可進入現場掛號頁面。
+- `searchButton`：按鈕，點擊後可進行掛號查詢。
+- `backToStartPage`：按鈕，點擊後可返回首頁。
 
 #### 方法:
-- `addAppointment()` - 新增掛號
-- `editAppointment()` - 修改掛號
-- `deleteAppointment()` - 刪除掛號
+-`AppointedButtonHandler` (預約鍵事件處理器)
+- **描述**：當點擊預約按鈕時，這個方法會創建並顯示 `AppointedPage` 頁面，並關閉當前頁面。
+
+- `On_siteButtonHandler` (現場掛號鍵事件處理器)
+- **描述**：當點擊現場掛號按鈕時，這個方法會創建並顯示 `On_sitePage` 頁面，並關閉當前頁面。
+
+- `SearchButtonHandler` (查詢鍵事件處理器)
+- **描述**：當點擊查詢按鈕時，這個方法會創建並顯示 `SearchPage` 頁面，並關閉當前頁面。
+
+- `BackToStartPageHandler` (回到首頁鍵事件處理器)
+- **描述**：當點擊回到首頁按鈕時，這個方法會創建並顯示 `StartPage` 頁面，並關閉當前頁面。
+
+#### 設計概述：
+- `BasicInfoPage` 類別負責顯示病患的基本資料（身分證、姓名、生日）並提供四個主要功能：預約掛號、現場掛號、掛號查詢和返回首頁。
+- 這些功能的實現是通過按鈕事件來觸發對應的頁面跳轉，並且每個按鈕都綁定了相應的事件處理器。
+
+#### 事件處理：
+- 當使用者點擊不同的按鈕時，對應的事件處理器會創建新的頁面並顯示，同時關閉當前頁面。
+`BasicInfoPage` 類別負責管理病患的掛號與約診時間，提供新增、修改與刪除掛號的功能。
+
 
 ## 類別間關聯
 
