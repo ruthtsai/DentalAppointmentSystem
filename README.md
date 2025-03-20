@@ -60,7 +60,7 @@
 ## 安裝與使用
 1. **下載專案**
    ```bash
-   git clone https://github.com/your-username/DentalAppointmentSystem.git
+   git clone https://github.com/ruthtsai/DentalAppointmentSystem.git
    cd DentalAppointmentSystem
    ```
 2. **開啟專案**
